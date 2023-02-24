@@ -1,10 +1,10 @@
   @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;600&family=Poiret+One&display=swap');
 
 :root {
-    --cor1: #3D3B37;
-    --cor2: #8A867C;
-    --cor3: #BDB7AA;
-    --cor4: #D6CAAB;
+    --cor1: #171717; /* plano de fundo */
+    --cor2: #519872; /* cor destaque */
+    --cor3: #EDEDED; /* texto geral */
+    --cor4: #444444; /* hover botão */
     --fonte-titulo: 'Poiret One', cursive;
     --fonte-corpo: 'Merriweather Sans', sans-serif;
 }
@@ -41,11 +41,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 30px;
 }
 
 .apresentacao__conteudo {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.apresentacao__curriculo {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -57,7 +63,7 @@ body {
 }
 
 .titulo-destaque {
-    color: var(--cor4);
+    color: var(--cor2);
 }
 
 .apresentacao__conteudo--texto {
@@ -71,11 +77,11 @@ li {
 
 .apresentacao__conteudo--texto a {
     text-decoration: none;
-    color: var(--cor4);
+    color: var(--cor2);
 }
 
 .apresentacao__conteudo--texto a:hover {
-    background-color: var(--cor2);
+    background-color: var(--cor4);
     border-radius: 6px;
 }
 
@@ -97,13 +103,13 @@ li {
     justify-content: center;
     gap: 16px;
     text-decoration: none;
-    color: var(--cor4);
+    color: var(--cor3);
     font-family: var(--fonte-corpo);
     font-weight: 600;
     font-size: 1.5rem;
     text-align: center;
-    width: 350px; 
-    border: 2px solid #BDB7AA;
+    width: 21rem; 
+    border: 2px solid var(--cor3);
     border-radius: 12px;
     padding: 21px 0; 
 }
@@ -113,7 +119,7 @@ li {
 }
 
 .apresentacao__links--texto:hover {
-    background-color: var(--cor2);    
+    background-color: var(--cor4);    
 }
 
 .foto {
@@ -128,7 +134,7 @@ li {
     text-align: center;
     font-family: var(--fonte-titulo);
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 @media (max-width: 1200px) {
@@ -148,3 +154,4 @@ li {
     .apresentacao__conteudo {
         width: auto;
     }
+}
